@@ -28,8 +28,16 @@ cd backend folder and demo
 
 ## Build infrastruture
 
+cd 
+
 * learn resource blocks
 * learn providers blocks
+
+##  Manage terraform drift
+
+* git clone https://github.com/hashicorp/learn-terraform-drift-management.git
+
+* reference https://developer.hashicorp.com/terraform/tutorials/state/resource-drift
 
 
 ## How to Set precondition in terraform
