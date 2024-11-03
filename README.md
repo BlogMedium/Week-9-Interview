@@ -23,6 +23,8 @@ scenario 1: file called .terraform.lock.hcl is present the below clone. which te
 
 ## How to handle remote state file in terraform 
 
+cd backend folder and demo
+
 
 
 
