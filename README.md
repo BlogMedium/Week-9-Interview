@@ -26,7 +26,10 @@ scenario 1: file called .terraform.lock.hcl is present the below clone. which te
 cd backend folder and demo
 
 
+## Build infrastruture
 
+-- learn resource blocks
+-- learn providers blocks
 
 
 ## How to Set precondition in terraform
