@@ -28,8 +28,8 @@ cd backend folder and demo
 
 ## Build infrastruture
 
-** learn resource blocks
-** learn providers blocks
+* learn resource blocks
+* learn providers blocks
 
 
 ## How to Set precondition in terraform
