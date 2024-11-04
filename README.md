@@ -25,6 +25,9 @@ scenario 1: file called .terraform.lock.hcl is present the below clone. which te
 
 cd backend folder and demo
 
+mkdir learn-terraform-aws-instance
+
+
 
 ## Build infrastruture
 
