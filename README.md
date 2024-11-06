@@ -118,7 +118,22 @@ Terraform modules are reusable containers of resource configurations that help o
 
 Refer Module folder
 
+## Terraform workspaces enable us to manage multiple deployments of the same configuration.
 
+terraform workspace
+
+```
+resource "aws_instance" "my_vm" {
+ami           = var.ami //Ubuntu AMI
+instance_type = var.instance_type
+ 
+tags = {
+  Name = var.name_tag,
+}
+}
+```
+terraform workspace show
+terraform workspace new test_workspace
 
 
 
