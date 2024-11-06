@@ -47,4 +47,37 @@ cd
 
 git clone https://github.com/hashicorp-education/learn-terraform-drift-and-policy.git
 
+#### Terraform Taint
+
+Use case: Suppose you have an AWS EC2 instance managed by Terraform, and you suspect that the instance is in an unhealthy state and want to force its recreation.
+
+Terraform taint command is used to mark a resource as "tainted," indicating that it needs to be recreated during the next terraform apply operation. Tainting a resource means that Terraform considers the resource to be potentially corrupted or out of sync with its desired state.
+
+main.tf
+```
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "ExampleInstance"
+  }
+}
+```
+```
+* terraform init
+* terraform apply
+* terraform state list
+* terraform taint 
+terraform taint aws_instance.example
+
+# terraform taint aws_instance.example
+Resource instance aws_instance.example has been marked as tainted.
+ranjiniganeshan@Ranjinis-MacBook-Pro terraform-taint % 
+#####
+
    
