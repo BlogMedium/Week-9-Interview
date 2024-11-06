@@ -80,4 +80,46 @@ Resource instance aws_instance.example has been marked as tainted.
 ranjiniganeshan@Ranjinis-MacBook-Pro terraform-taint % 
 #####
 
+## Data Source
+
+data Source fetches the data in fly. Instead of harding coding the AMI. Dynamically at runtime 
+
+```
+data "aws_ami" "ubuntu" {
+  most_recent      = true
+  owners           = ["099720109477"]
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-arm64-server-*"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+output "aws_ami" {
+  value = data.aws_ami.ubuntu.id
+  
+}
+```
+
+### Modules 
+
+Terraform modules are reusable containers of resource configurations that help organize, package, and reuse infrastructure setups, with root modules serving as the main configuration, child modules allowing modular and repeated use, and published modules enabling access to community or private registries for shared infrastructure solutions.
+
+
+Refer Module folder
+
+
+
+
+
    
